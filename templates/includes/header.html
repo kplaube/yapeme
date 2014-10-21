@@ -1,0 +1,34 @@
+<div class="pure-u-1">
+  <nav class="pure-menu pure-menu-open pure-menu-horizontal">
+    <a href="{{ SITEURL }}/index.html" title="Home page" class="pure-menu-heading">{{ SITENAME }}</a>
+
+    <ul>
+      <li>
+        <a href="{{ SITEURL }}/index.html" title="Blog">Blog</a>
+      </li>
+
+      {% if DISPLAY_PAGES_ON_MENU %}
+        {% for p in pages %}
+          <li>
+            <a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
+          </li>
+        {% endfor %}
+      {% endif %}
+    </ul>
+
+    <ul class="SocialNavigation">
+      <li class="SocialNavigation-item">
+        <a href="#" title="Facebook" class="SocialNavigation-facebook">Facebook</a>
+      </li>
+      <li class="SocialNavigation-item">
+        <a href="#" title="Twitter" class="SocialNavigation-twitter">Twitter</a>
+      </li>
+      <li class="SocialNavigation-item">
+        <a href="#" title="LinkedIn" class="SocialNavigation-linkedin">LinkedIn</a>
+      </li>
+      <li class="SocialNavigation-item">
+        <a href="#" title="Github" class="SocialNavigation-github">Github</a>
+      </li>
+    </ul>
+  </nav>
+</div>
