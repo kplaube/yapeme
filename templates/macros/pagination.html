@@ -1,0 +1,7 @@
+{% macro page_url(site_url, page_name) -%}
+  {% if site_url in page_name %}
+    {{ page_name }}
+  {% else %}
+    {{ site_url }}/{{ page_name }}
+  {% endif %}
+{%- endmacro %}

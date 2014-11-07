@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}{{ SITESUBTITLE }}{% endblock %} | {% block sitename %}{{ SITENAME }}{% endblock %}</title>
+
+  <meta name="author" content="{{ AUTHOR }}">
+  <meta name="description" content="{% block description %}{{ SITEDESCRIPTION }}{% endblock %}">
+  <meta name="robots" content="{% block robots %}index,follow{% endblock %}">
+
+  <meta property="og:site_name" content="{{ SITENAME }}">
+  <meta property="og:type" content="website">
+  {% if article and article.meta %}
+    <meta name="keywords" content="{{ article.meta.keywords }}">
+    <meta property="og:title" content="{{ article.meta.og_title }}">
+    <meta property="og:description" content="{{ article.meta.og_description }}">
+    <meta proper  ty="og:url" content="{{ article.meta.og_url }}">
+    <meta property="og:image" content="{{ article.meta.og_image }}">
+  {% elif DEFAULT_OG_IMAGE %}
+    <meta property="og:image" content="{{ DEFAULT_OG_IMAGE }}">
+  {% endif %}
+
+  {% if FB_ADMINS %}
+    <meta property="fb:admins" content="{{ FB_ADMINS }}">
+  {% endif %}
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {% if FAVICON_URL %}
+    <link rel="icon" type="image/x-icon" href="{{ FAVICON_URL }}">
+  {% endif %}
+
+  <link rel="alternate" type="application/rss+xml" title="{{ SITENAME }} &raquo; Feed" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}">
+  <link rel="canonical" href="{% block canonical_url %}{{ SITEURL }}/{{ page_name }}{% if articles_page and articles_page.number != 1 %}{{ articles_page.number }}{% endif %}.html{% endblock %}">
+
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+</head>
+<body>
+  <div class="Page pure-g">
+    {% include "includes/header.html" %}
+
+    <div class="PageContent pure-u-1">
+      {% block content %}{% endblock %}
+    </div>
+
+    {% include "includes/footer.html" %}
+  </div>
+</body>
+</html>
