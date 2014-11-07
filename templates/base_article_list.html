@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
+    {% set is_summary = true %}
+
     {% for article in articles_page.object_list %}
         {% include "includes/article.html" %}
     {% endfor %}

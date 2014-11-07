@@ -1,1 +1,28 @@
-<h1>{{ article.title }}</h1>
+<article class="Article">
+    <header>
+        <h1>
+            {% if is_summary %}
+                <a href="{{ SITEURL }}/{{ article.url }}" title="Read more">
+            {% endif %}
+            {{ article.title }}
+            {% if is_summary %}
+                </a>
+            {% endif %}
+        </h1>
+
+        <p>
+            <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>, under
+            {% for tag in article.tags %}
+                <a href="{{ tag.url }}" title="Read more with label {{ tag }}">{{ tag }}</a>
+            {% endfor %}
+        </p>
+    </header>
+
+    <div>
+        {% if is_summary %}
+            {{ article.summary }}
+        {% else %}
+            {{ article.content }}
+        {% endif %}
+    </div>
+</article>
