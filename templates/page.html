@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }}{% endblock %}
+{% block canonical_url %}{{ SITEURL }}/{{ page.url }}{% endblock %}
+
+{% block content %}
+    <article>
+        <h1>{{ page.title }}</h1>
+
+        <div>
+            {{ page.content }}
+        </div>
+    </article>
+{% endblock content %}

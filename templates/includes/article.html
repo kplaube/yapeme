@@ -25,4 +25,10 @@
             {{ article.content }}
         {% endif %}
     </div>
+
+    {% if not is_summary %}
+        <div>
+            {% include "includes/disqus.html" %}
+        </div>
+    {% endif %}
 </article>

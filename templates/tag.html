@@ -1,0 +1,11 @@
+{% extends "base_article_list.html" %}
+
+{% block title %}Posts with label "{{ tag }}"{% endblock %}
+{% block description %}Posts with label "{{ tag }}"{% endblock %}
+{% block robots %}noindex,follow{% endblock %}
+
+{% block content %}
+    <h1>Posts with label "{{ tag }}"</h1>
+
+    {{ super() }}
+{% endblock content %}
