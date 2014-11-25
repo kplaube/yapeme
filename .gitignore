@@ -1,4 +1,5 @@
 .ruby-version
 Gemfile.lock
-env
-node_modules
+.sass-cache/
+env/
+node_modules/
