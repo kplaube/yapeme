@@ -1,0 +1,21 @@
+{
+  "name": "yapeme",
+  "version": "1.0.0",
+  "description": "Yet Another Pelican Theme",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kplaube/yapeme.git"
+  },
+  "author": "Klaus Laube",
+  "license": "GNU/GPL2",
+  "bugs": {
+    "url": "https://github.com/kplaube/yapeme/issues"
+  },
+  "homepage": "https://github.com/kplaube/yapeme",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
+}
