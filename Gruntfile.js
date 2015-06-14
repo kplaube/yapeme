@@ -1,41 +1,41 @@
 module.exports = function(grunt) {
-	var config = {};
-
-	config.watch = {
-		compass: {
-			files: ['sass/{,**/}*.scss'],
-			tasks: ['compass:dev']
-		}
+	var config = {
+		pkg: grunt.file.readJSON('package.json'),
+		sassPath: 'sass',
+		staticPath: 'static'
 	};
 
-	config.compass = {
+	config.sass = {
 		options: {
-			bundleExec: true,
-			relativeAssets: true,
-			cssDir: 'static/css',
-			sassDir: 'sass',
-			imagesDir: 'static/img'
-		},
-		dev: {
-			options: {
-				environment: 'development',
-				outputStyle: 'expanded'
-			}
+			sourceMap: true,
+			outputStyle: 'expanded'
 		},
 		dist: {
-			options: {
-				environment: 'production',
-				outputStyle: 'compressed',
-				force: true
+			files: {
+				'<%= staticPath %>/css/styles.css': '<%= sassPath %>/styles.scss'
 			}
 		}
 	};
 
-	grunt.initConfig(config);
+    config.autoprefixer = {
+        no_dest_single: {
+            src: '<%= staticPath %>/css/styles.css',
+        }
+    };
 
-	grunt.loadNpmTasks('grunt-contrib-compass');
-	grunt.loadNpmTasks('grunt-contrib-watch');
+    config.watch = {
+        sass: {
+            files: ['<%= sassPath %>/**/*.{scss,sass}', '<%= sassPath %>/partials/**/*.{scss,sass}'],
+            tasks: ['sass:dist', 'autoprefixer']
+        }
+    };
 
-	grunt.registerTask('default', ['compass:dev', 'watch']);
-	grunt.registerTask('dist', ['compass:dist']);
+    grunt.initConfig(config);
+
+    grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-autoprefixer');
+
+    grunt.registerTask('default', ['sass', 'autoprefixer', 'watch:sass']);
+
 };

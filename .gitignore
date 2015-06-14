@@ -1,5 +1,4 @@
-.ruby-version
-Gemfile.lock
 .sass-cache/
 env/
 node_modules/
+*.map
