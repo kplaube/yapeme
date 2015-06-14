@@ -372,7 +372,7 @@
 
 .PageHeader-link:hover {
   background: transparent;
-  text-decoration: underline;
+  color: #ea141f;
 }
 
 .PageFooter {
