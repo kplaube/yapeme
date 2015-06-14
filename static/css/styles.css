@@ -6,6 +6,12 @@
   color: #ea141f;
 }
 
+.align-center {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .align-left {
   margin: 0 20px 10px 0;
 }
@@ -362,6 +368,11 @@
 .PageHeader-link {
   color: #111111;
   text-transform: lowercase;
+}
+
+.PageHeader-link:hover {
+  background: transparent;
+  text-decoration: underline;
 }
 
 .PageFooter {
