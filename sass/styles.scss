@@ -1,5 +1,8 @@
 @import "settings";
+@import "utilities";
+
 @import "components/Page";
 @import "components/PageHeader";
-
-body { background: #f5f5f5; }
+@import "components/PageFooter";
+@import "components/Article";
+@import "components/Pagination";

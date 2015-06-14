@@ -1,22 +1,21 @@
 <div class="PageHeader pure-u-1">
     <nav class="pure-menu pure-menu-open pure-menu-horizontal">
+        {% set sitename = SITENAME.split() %}
+
         <a
 			href="{{ SITEURL }}/index.html"
 			title="Home page"
-			class="PageHeader-link pure-menu-heading pure-menu-link">{{ SITENAME }}</a>
+            class="PageHeader-link pure-menu-heading pure-menu-link"
+        >{{sitename[0] }}{% if sitename|length > 1 %}<span class="u-highlighted">{{ sitename[1:]|join(' ') }}{% endif %}</a>
 
-        <ul class="PageHeader-menu pure-menu-list">
-            <li class="pure-menu-item">
-                <a href="{{ SITEURL }}/index.html" title="Blog" class="PageHeader-link pure-menu-link">Blog</a>
-            </li>
-
-            {% if DISPLAY_PAGES_ON_MENU %}
+		{% if DISPLAY_PAGES_ON_MENU %}
+			<ul class="PageHeader-menu pure-menu-list">
                 {% for p in pages %}
                     <li class="pure-menu-item">
                         <a href="{{ SITEURL }}/{{ p.url }}" class="PageHeader-link pure-menu-link">{{ p.title }}</a>
                     </li>
                 {% endfor %}
-            {% endif %}
-        </ul>
+			</ul>
+		{% endif %}
     </nav>
 </div>

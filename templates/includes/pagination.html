@@ -1,27 +1,32 @@
 {% import 'macros/pagination.html' as pagination %}
 
 {% if articles_page and articles_paginator.num_pages > 1 %}
-<div class="pure-paginator">
+<ul class="Pagination u-box">
     {% if articles_page.has_previous() %}
-        <li>
-            <a href="{{ pagination.page_url(SITEURL, page_name) }}{% if articles_page.previous_page_number() > 1 %}{{ articles_page.previous_page_number() }}{% endif %}.html"
-                title="Previous page" class="pure-button prev">&#171;</a>
+        <li class="Pagination-item">
+            <a
+                class="Pagination-link"
+                href="{{ pagination.page_url(SITEURL, page_name) }}{% if articles_page.previous_page_number() > 1 %}{{ articles_page.previous_page_number() }}{% endif %}.html"
+                title="Previous page">&#171;</a>
         </li>
     {% endif %}
 
     {% for page_number in range(1, articles_paginator.num_pages + 1) %}
-        <li>
-            <a href="{{ pagination.page_url(SITEURL, page_name) }}{% if page_number > 1 %}{{ page_number }}{% endif %}.html"
-                title="Page {{ page_number }}"
-                class="pure-button{% if articles_page.number == page_number %} pure-button-active{% endif %}">{{ page_number }}</a>
+        <li class="Pagination-item">
+            <a
+                class="Pagination-link{% if articles_page.number == page_number %} Pagination-link--active{% endif %}"
+                href="{{ pagination.page_url(SITEURL, page_name) }}{% if page_number > 1 %}{{ page_number }}{% endif %}.html"
+                title="Page {{ page_number }}">{{ page_number }}</a>
         </li>
     {% endfor %}
 
     {% if articles_page.has_next() %}
-        <li>
-            <a href="{{ pagination.page_url(SITEURL, page_name) }}{{ articles_page.next_page_number() }}.html"
-                title="Next page" class="pure-button next">&#187;</a>
+        <li class="Pagination-item">
+            <a
+                class="Pagination-link"
+                href="{{ pagination.page_url(SITEURL, page_name) }}{{ articles_page.next_page_number() }}.html"
+                title="Next page">&#187;</a>
         </li>
     {% endif %}
-</div>
+</ul>
 {% endif %}

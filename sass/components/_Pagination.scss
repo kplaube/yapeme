@@ -1,0 +1,15 @@
+.Pagination {
+  list-style: none;
+}
+
+.Pagination-item {
+  border: 1px solid opacify($font-color, .125);
+  display: inline-block;
+}
+
+.Pagination-link {
+  color: $font-color;
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+}

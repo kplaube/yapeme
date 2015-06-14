@@ -1,0 +1,50 @@
+.Article-title {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.Article-titleLink {
+  color: $font-color;
+  text-decoration: none;
+}
+
+.Article-pubDate {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.Article-content {
+  font-family: Georgia, sans-serif;
+  font-size: 20px;
+  line-height: 32px;
+
+  a {
+    color: $link-color;
+    text-decoration: none;
+  }
+
+  img {
+    border: 4px solid #dcdcdc;
+
+    &.align-left {
+      float: left;
+      height: auto;
+      width: 40%;
+    }
+  }
+
+}
+
+.Article-footer {
+  margin: -20px 0 0 0;
+
+  .Article-readmore {
+    color: $font-color;
+    font-family: Roboto, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+}

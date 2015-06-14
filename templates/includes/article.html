@@ -1,8 +1,11 @@
-<article class="Article">
+<article class="Article u-box">
     <header>
-        <h1>
+        <h1 class="Article-title">
             {% if is_summary %}
-                <a href="{{ SITEURL }}/{{ article.url }}" title="Read more">
+                <a
+                    class="Article-titleLink"
+                    href="{{ SITEURL }}/{{ article.url }}"
+                    title="Read more">
             {% endif %}
             {{ article.title }}
             {% if is_summary %}
@@ -10,17 +13,20 @@
             {% endif %}
         </h1>
 
-        <p>
-            <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>, under
-            {% for tag in article.tags %}
-                <a href="{{ tag.url }}" title="Read more with label {{ tag }}">{{ tag }}</a>
-            {% endfor %}
-        </p>
+        <time
+            class="Article-pubDate"
+            datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
     </header>
 
-    <div>
+    <div class="Article-content">
         {% if is_summary %}
             {{ article.summary }}
+            <p class="Article-footer">
+                <a
+                    class="Article-readmore"
+                    href="{{ SITEURL }}/{{ article.url }}"
+                    title="Read More">Read more</a>
+            </p>
         {% else %}
             {{ article.content }}
         {% endif %}
