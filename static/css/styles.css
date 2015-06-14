@@ -342,6 +342,8 @@
 /* Literal.Number.Integer.Long */
 .Page {
   color: #111111;
+  margin: 0 auto;
+  max-width: 768px;
 }
 
 .pure-g [class*="pure-u"] {
@@ -379,6 +381,10 @@
   text-decoration: underline;
 }
 
+.PageFooter .PageFooter-link:hover {
+  text-decoration: none;
+}
+
 .Article-title {
   display: block;
   font-size: 26px;
@@ -405,11 +411,16 @@
 
 .Article-content h1, .Article-content h2, .Article-content h3, .Article-content h4, .Article-content h5, .Article-content h6 {
   font-family: Roboto, Helvetica, sans-serif;
+  padding-top: 10px;
 }
 
 .Article-content a {
   color: #ea141f;
   text-decoration: none;
+}
+
+.Article-content a:hover {
+  text-decoration: underline;
 }
 
 .Article-content blockquote {
@@ -423,19 +434,21 @@
 
 .Article-content h2 {
   font-size: 24px;
-  font-weight: bold;
-  padding-top: 10px;
+}
+
+.Article-content h3 {
+  font-size: 20px;
 }
 
 .Article-content img {
   border: 4px solid #dcdcdc;
   height: auto;
-  width: 100%;
+  max-width: 100%;
 }
 
 .Article-content img.align-left {
   float: left;
-  width: 40%;
+  max-width: 40%;
 }
 
 .Article-content ul {
@@ -465,8 +478,12 @@
   text-decoration: underline;
 }
 
+.Article-footer .Article-readmore:hover {
+  text-decoration: none;
+}
+
 .Article-comments {
-  padding-top: 60px;
+  padding-top: 40px;
 }
 
 .Pagination {
@@ -484,4 +501,9 @@
   display: block;
   padding: 5px 10px;
   text-decoration: none;
+}
+
+.Pagination-link:hover {
+  background: #ea141f;
+  color: white;
 }
