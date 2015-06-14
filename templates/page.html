@@ -4,10 +4,10 @@
 {% block canonical_url %}{{ SITEURL }}/{{ page.url }}{% endblock %}
 
 {% block content %}
-    <article>
-        <h1>{{ page.title }}</h1>
+    <article class="Article u-box">
+        <h1 class="Article-title">{{ page.title }}</h1>
 
-        <div>
+        <div class="Article-content">
             {{ page.content }}
         </div>
     </article>

@@ -1,4 +1,5 @@
 .Article-title {
+  display: block;
   font-size: 26px;
   font-weight: 500;
   margin-bottom: 10px;
@@ -20,19 +21,54 @@
   font-size: 20px;
   line-height: 32px;
 
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Roboto, Helvetica, sans-serif;
+  }
+
   a {
     color: $link-color;
     text-decoration: none;
   }
 
+  blockquote {
+    color: lighten($font-color, 20);
+    border-left: 4px solid rgba(0, 0, 0, .0625);
+    margin-left: 0;
+    margin-right: 0;
+    font-style: italic;
+    padding: 0 0 0 1.5rem;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 10px;
+  }
+
   img {
     border: 4px solid #dcdcdc;
+    height: auto;
+    width: 100%;
 
     &.align-left {
       float: left;
-      height: auto;
       width: 40%;
     }
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  pre {
+    padding: 15px;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
 
 }
@@ -47,4 +83,8 @@
     font-weight: 500;
     text-decoration: underline;
   }
+}
+
+.Article-comments {
+  padding-top: 60px;
 }
