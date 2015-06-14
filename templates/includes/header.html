@@ -1,29 +1,22 @@
-<div class="pure-u-1">
+<div class="PageHeader pure-u-1">
     <nav class="pure-menu pure-menu-open pure-menu-horizontal">
-        <a href="{{ SITEURL }}/index.html" title="Home page" class="pure-menu-heading">{{ SITENAME }}</a>
+        <a
+			href="{{ SITEURL }}/index.html"
+			title="Home page"
+			class="PageHeader-link pure-menu-heading pure-menu-link">{{ SITENAME }}</a>
 
-        <ul>
-            <li>
-                <a href="{{ SITEURL }}/index.html" title="Blog">Blog</a>
+        <ul class="PageHeader-menu pure-menu-list">
+            <li class="pure-menu-item">
+                <a href="{{ SITEURL }}/index.html" title="Blog" class="PageHeader-link pure-menu-link">Blog</a>
             </li>
 
             {% if DISPLAY_PAGES_ON_MENU %}
                 {% for p in pages %}
-                    <li>
-                        <a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
+                    <li class="pure-menu-item">
+                        <a href="{{ SITEURL }}/{{ p.url }}" class="PageHeader-link pure-menu-link">{{ p.title }}</a>
                     </li>
                 {% endfor %}
             {% endif %}
         </ul>
-
-        {% if SOCIAL %}
-            <ul class="SocialNavigation">
-            {% for social in SOCIAL %}
-                <li class="SocialNavigation-item">
-                    <a href="{{ social[1] }}" title="{{ social[0] }}" class="SocialNavigation-{{ social[0]|lower }}">{{ social[0] }}</a>
-                </li>
-            {% endfor %}
-            </ul>
-        {% endif %}
     </nav>
 </div>
