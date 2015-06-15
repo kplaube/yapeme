@@ -62,3 +62,8 @@ Plugins
 This theme uses the following plugins:
 
 * [Better Meta](https://github.com/kplaube/better_meta)
+
+Screenshot
+----------
+
+![screenshot](docs/screenshot.png)
