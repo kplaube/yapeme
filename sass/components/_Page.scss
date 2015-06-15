@@ -1,9 +1,5 @@
 .Page {
-	color: rgb(17, 17, 17);
+	color: $font-color;
   margin: 0 auto;
   max-width: 768px;
-}
-
-.pure-g [class *="pure-u"] {
-	font-family: Roboto, Helvetica, sans-serif;
 }

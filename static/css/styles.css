@@ -16,6 +16,15 @@
   margin: 0 20px 10px 0;
 }
 
+body,
+.pure-g [class*="pure-u"] {
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
+a {
+  color: #ea141f;
+}
+
 .highlight .hll {
   background-color: #ffffcc;
 }
@@ -350,10 +359,6 @@
   color: #111111;
   margin: 0 auto;
   max-width: 768px;
-}
-
-.pure-g [class*="pure-u"] {
-  font-family: Roboto, Helvetica, sans-serif;
 }
 
 .PageHeader {
