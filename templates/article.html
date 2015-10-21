@@ -25,6 +25,8 @@
 
   <script src="{{ SITEURL }}/theme/share-bar/dist/js/share.bar.min.js"></script>
   <script>
-    new ShareBar();
+    new ShareBar({
+        facebookAppId: {{ FACEBOOK_APP_ID }}
+    });
   </script>
 {% endblock %}
