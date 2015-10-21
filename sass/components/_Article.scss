@@ -1,8 +1,22 @@
+.Article {
+  border-bottom: 1px solid rgba(0, 0, 0, .125);
+  padding-bottom: 40px;
+  padding-top: 40px;
+
+  .is-fullEntry & {
+    border-bottom: 0;
+  }
+}
+
 .Article-title {
   display: block;
   font-size: 26px;
   font-weight: 500;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
+
+  .is-fullEntry & {
+    font-size: 40px;
+  }
 }
 
 .Article-titleLink {
@@ -23,7 +37,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: Roboto, Helvetica, sans-serif;
-    padding-top: 10px;
+    padding-top: 16px;
   }
 
   a {
@@ -45,7 +59,7 @@
   }
 
   code {
-    background: rgba(0, 0, 0, .06);
+    background: #f0f0f0;
     padding: 0 6px;
   }
 
@@ -87,6 +101,7 @@
 
 .Article-footer {
   margin: -20px 0 0 0;
+  text-align: right;
 
   .Article-readmore {
     color: $font-color;

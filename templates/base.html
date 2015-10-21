@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="{{ SITEURL }}/theme/css/styles.css">
 </head>
 <body>
-  <div class="Page pure-g">
+    <div class="Page pure-g {% block page_css %}{% endblock %}">
     {% include "includes/header.html" %}
 
     <div class="PageContent pure-u-1">
