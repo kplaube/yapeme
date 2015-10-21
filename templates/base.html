@@ -24,6 +24,10 @@
     <meta property="fb:app_id" content="{{ FACEBOOK_APP_ID }}">
   {% endif %}
 
+  {% if GOOGLE_SITE_VERIFICATION %}
+    <meta name="google-site-verification" content="{{ GOOGLE_SITE_VERIFICATION }}">
+  {% endif %}
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   {% if FAVICON_URL %}
