@@ -1,0 +1,22 @@
+{
+  "name": "yapeme",
+  "version": "0.0.0",
+  "homepage": "https://github.com/kplaube/yapeme",
+  "authors": [
+    "Klaus Laube <klaus@corp.globo.com>"
+  ],
+  "moduleType": [
+    "es6"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "share-bar": "~3.0.13"
+  }
+}

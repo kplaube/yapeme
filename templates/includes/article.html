@@ -33,6 +33,13 @@
     </div>
 
     {% if not is_summary %}
+        <div
+            class="Article-share share-bar"
+            data-title="{{ article.title }}"
+            data-url="{{ SITEURL }}/{{ article.url }}">
+            <!-- share-bar plugin -->
+        </div>
+
         <div class="Article-comments">
             {% include "includes/disqus.html" %}
         </div>

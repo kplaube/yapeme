@@ -23,6 +23,17 @@ module.exports = function(grunt) {
         }
     };
 
+    config.copy = {
+        main: {
+            files: [{
+                expand: true,
+                cwd: 'bower_components/',
+                src: ['*/dist/**'],
+                dest: 'static/'
+            }]
+        }
+    };
+
     config.watch = {
         sass: {
             files: ['<%= sassPath %>/**/*.{scss,sass}', '<%= sassPath %>/partials/**/*.{scss,sass}'],
@@ -32,10 +43,11 @@ module.exports = function(grunt) {
 
     grunt.initConfig(config);
 
-    grunt.loadNpmTasks('grunt-sass');
-    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-sass');
 
-    grunt.registerTask('default', ['sass', 'autoprefixer', 'watch:sass']);
+    grunt.registerTask('default', ['copy', 'sass', 'autoprefixer', 'watch:sass']);
 
 };

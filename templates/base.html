@@ -14,7 +14,7 @@
     <meta name="keywords" content="{{ article.meta.keywords }}">
     <meta property="og:title" content="{{ article.meta.og_title }}">
     <meta property="og:description" content="{{ article.meta.og_description }}">
-    <meta proper  ty="og:url" content="{{ article.meta.og_url }}">
+    <meta property="og:url" content="{{ article.meta.og_url }}">
     <meta property="og:image" content="{{ article.meta.og_image }}">
   {% elif DEFAULT_OG_IMAGE %}
     <meta property="og:image" content="{{ DEFAULT_OG_IMAGE }}">
@@ -33,9 +33,11 @@
   <link rel="alternate" type="application/rss+xml" title="{{ SITENAME }} &raquo; Feed" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}">
   <link rel="canonical" href="{% block canonical_url %}{{ SITEURL }}/{{ page_name }}{% if articles_page and articles_page.number != 1 %}{{ articles_page.number }}{% endif %}.html{% endblock %}">
 
-  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-  <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Roboto'>
-  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/styles.css">
+  {% block styles %}
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/styles.css">
+  {% endblock %}
 </head>
 <body>
     <div class="Page pure-g {% block page_css %}{% endblock %}">
@@ -48,6 +50,7 @@
     {% include "includes/footer.html" %}
   </div>
 
+  {% block scripts %}{% endblock %}
   {% include "includes/analytics.html" %}
 </body>
 </html>

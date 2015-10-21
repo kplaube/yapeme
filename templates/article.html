@@ -5,6 +5,12 @@
 {% block description %}{{ article.meta.description }}{% endblock %}
 {% block robots %}{{ article.meta.robots }}{% endblock %}
 
+{% block styles %}
+  {{ super() }}
+
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/share-bar/dist/css/share.bar.min.css">
+{% endblock %}
+
 {% block page_css %}is-fullEntry{% endblock %}
 
 {% block content %}
@@ -13,3 +19,12 @@
     {% include "includes/article.html" %}
 
 {% endblock content %}
+
+{% block scripts %}
+  {{ super() }}
+
+  <script src="{{ SITEURL }}/theme/share-bar/dist/js/share.bar.min.js"></script>
+  <script>
+    new ShareBar();
+  </script>
+{% endblock %}

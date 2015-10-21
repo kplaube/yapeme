@@ -12,6 +12,8 @@ install:
 	@npm install -g grunt-cli
 	@echo "Installing Grunt dependencies..."
 	@npm install
+	@echo "Installing Bower dependencies..."
+	@bower install
 
 run:
 	@echo 'Running with the devil!'
