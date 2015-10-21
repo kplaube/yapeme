@@ -16,7 +16,7 @@ We're using cool technologies, like:
 * [Grunt](http://gruntjs.com/)
 * [Pure.CSS](http://purecss.io/)
 
-The only thing you'll need to install is [NodeJS/NPM](https://nodejs.org/).
+The only thing you'll need to install is [NodeJS/NPM](https://nodejs.org/) and [Bower](http://bower.io/).
 
 Installing
 ----------
@@ -41,7 +41,7 @@ AUTHOR = "Author's name"
 DEFAULT_OG_IMAGE = "The og:image url"
 DISQUS_SITENAME = "Your Disqus sitename"
 FAVICON_URL = "The favicon url"
-FB_ADMINS = "Add your Facebook user id to check out insigths"
+FACEBOOK_APP_ID = "Add your Facebook APP ID to check out insigths"
 FEED_ALL_RSS = "Relative URL to output the all-posts RSS feed"
 FEED_DOMAIN = "The domain prepended to feed URLs"
 GOOGLE_ANALYTICS = "Your GA ID"
@@ -62,6 +62,7 @@ Plugins
 This theme uses the following plugins:
 
 * [Better Meta](https://github.com/kplaube/better_meta)
+* [globocom/Share Bar](https://github.com/globocom/share-bar)
 
 Screenshot
 ----------
