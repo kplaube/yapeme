@@ -1,11 +1,11 @@
 {% extends "base_article_list.html" %}
 
-{% block title %}Posts with label "{{ tag }}"{% endblock %}
-{% block description %}Posts with label "{{ tag }}"{% endblock %}
+{% block title %}Posts com tag "{{ tag }}"{% endblock %}
+{% block description %}Post com tag "{{ tag }}"{% endblock %}
 {% block robots %}noindex,follow{% endblock %}
 
 {% block content %}
-    <h1 class="Tag-title">Posts com tag "{{ tag }}"</h1>
+    <h1 class="Tag-title u-box">Posts com tag "{{ tag }}"</h1>
 
     {{ super() }}
 {% endblock content %}

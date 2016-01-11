@@ -522,6 +522,11 @@ a {
   padding-top: 40px;
 }
 
+.Article-tags {
+  font-family: Georgia, sans-serif;
+  margin-bottom: 40px;
+}
+
 .Pagination {
   list-style: none;
   text-align: center;
@@ -545,5 +550,6 @@ a {
 }
 
 .Tag-title {
-  text-align: center;
+  font-size: 32px;
+  margin: 0;
 }

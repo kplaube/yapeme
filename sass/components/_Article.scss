@@ -1,3 +1,5 @@
+$font-family: Georgia, sans-serif;
+
 .Article {
   border-bottom: 1px solid rgba(0, 0, 0, .125);
   padding-bottom: 40px;
@@ -31,7 +33,7 @@
 }
 
 .Article-content {
-  font-family: Georgia, sans-serif;
+  font-family: $font-family;
   font-size: 20px;
   line-height: 32px;
 
@@ -118,4 +120,9 @@
 
 .Article-comments {
   padding-top: 40px;
+}
+
+.Article-tags {
+  font-family: $font-family;
+  margin-bottom: 40px;
 }

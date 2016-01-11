@@ -33,6 +33,15 @@
     </div>
 
     {% if not is_summary %}
+        {% if article.tags %}
+            <div class="Article-tags">
+                Tags:
+                {% for tag in article.tags %}
+                    <a href="{{ tag.url }}" title="Leia mais sobre {{ tag }}">{{ tag }}</a>{% if loop.last %}.{% else %}, {% endif %} 
+                {% endfor %}
+            </div>
+        {% endif %}
+
         <div
             class="Article-share share-bar"
             data-title="{{ article.title }}"
