@@ -9,9 +9,9 @@ help:
 
 install:
 	@echo "Installing Grunt..."
-	@npm install -g grunt-cli
+	@sudo npm install -g grunt-cli
 	@echo "Installing Grunt dependencies..."
-	@npm install
+	@npm install --save-dev
 	@echo "Installing Bower dependencies..."
 	@bower install
 
