@@ -61,7 +61,7 @@ Plugins
 
 This theme uses the following plugins:
 
-* [Better Meta](https://github.com/kplaube/better_meta)
+* [Extended Meta](https://github.com/kplaube/extended_meta)
 * [globocom/Share Bar](https://github.com/globocom/share-bar)
 
 Screenshot
