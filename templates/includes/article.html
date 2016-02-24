@@ -37,7 +37,7 @@
             <div class="Article-tags">
                 Tags:
                 {% for tag in article.tags %}
-                    <a href="{{ tag.url }}" title="Leia mais sobre {{ tag }}">{{ tag }}</a>{% if loop.last %}.{% else %}, {% endif %} 
+                <a href="{{ SITEURL }}/{{ tag.url }}" title="Leia mais sobre {{ tag }}">{{ tag }}</a>{% if loop.last %}.{% else %}, {% endif %} 
                 {% endfor %}
             </div>
         {% endif %}
