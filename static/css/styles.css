@@ -537,6 +537,10 @@ a {
   display: inline-block;
 }
 
+.Pagination-item--active {
+  border: 0;
+}
+
 .Pagination-link {
   color: #111111;
   display: block;

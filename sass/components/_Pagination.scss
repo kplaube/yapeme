@@ -6,6 +6,10 @@
 .Pagination-item {
   border: 1px solid opacify($font-color, .125);
   display: inline-block;
+
+  &--active {
+      border: 0;
+  }
 }
 
 .Pagination-link {

@@ -12,7 +12,7 @@
     {% endif %}
 
     {% for page_number in range(1, articles_paginator.num_pages + 1) %}
-        <li class="Pagination-item">
+        <li class="Pagination-item{% if articles_page.number == page_number %} Pagination-item--active{% endif %}">
             <a
                 class="Pagination-link{% if articles_page.number == page_number %} Pagination-link--active{% endif %}"
                 href="{{ pagination.page_url(SITEURL, page_name) }}{% if page_number > 1 %}{{ page_number }}{% endif %}.html"
