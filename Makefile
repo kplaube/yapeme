@@ -9,7 +9,7 @@ help:
 
 install:
 	@echo "Installing Grunt..."
-	@sudo npm install -g grunt-cli
+	@npm install grunt-cli
 	@echo "Installing Grunt dependencies..."
 	@npm install --save-dev
 	@echo "Installing Bower dependencies..."
@@ -17,4 +17,4 @@ install:
 
 run:
 	@echo 'Running with the devil!'
-	grunt
+	./node_modules/.bin/grunt
