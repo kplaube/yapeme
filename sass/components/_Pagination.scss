@@ -1,25 +1,20 @@
-.Pagination {
-  list-style: none;
-  text-align: center;
-}
+$pagination-color: lighten($font-color, 30) !default;
+$pagination-border-color: $pagination-color !default;
 
 .Pagination-item {
-  border: 1px solid opacify($font-color, .125);
-  display: inline-block;
+  display: none;
 
-  &--active {
-      border: 0;
+  &--arrow {
+    display: block;
   }
 }
 
 .Pagination-link {
-  color: $font-color;
+  border: 1px solid $pagination-border-color;
+  color: $pagination-color;
   display: block;
-  padding: 5px 10px;
+  line-height: 3;
+  margin: .3125em 0;
+  text-align: center;
   text-decoration: none;
-
-  &:hover {
-    background: $link-color;
-    color: white;
-  }
 }

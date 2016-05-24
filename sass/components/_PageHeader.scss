@@ -1,18 +1,30 @@
-.PageHeader {
-	font-size: 18px;
-	padding: 2rem 0;
-}
-
-.PageHeader-menu {
-	float: right;
-}
-
-.PageHeader-link {
-	color: $font-color;
-	text-transform: lowercase;
+%header-link {
+  color: $font-color;
+  text-transform: lowercase;
 
   &:hover {
     background: transparent;
     color: $link-color;
   }
+}
+
+.PageHeader {
+  border-bottom: 1px solid $separator-color;
+  font-size: 1.1rem;
+  padding: .2em 0;
+}
+
+.PageHeader-menu {
+  float: right;
+}
+
+.PageHeader-link {
+  @extend %header-link;
+}
+
+.PageHeader-menu-link {
+  @extend %header-link;
+
+  font-size: .9rem;
+  padding-top: .7em;
 }

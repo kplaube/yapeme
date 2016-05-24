@@ -3,11 +3,15 @@
 {% if articles_page and articles_paginator.num_pages > 1 %}
 <ul class="Pagination u-box">
     {% if articles_page.has_previous() %}
-        <li class="Pagination-item">
+        <li class="Pagination-item Pagination-item--arrow">
             <a
                 class="Pagination-link"
                 href="{{ pagination.page_url(SITEURL, page_name) }}{% if articles_page.previous_page_number() > 1 %}{{ articles_page.previous_page_number() }}{% endif %}.html"
-                title="Página anterior">&#171;</a>
+                title="Página anterior">
+
+                <span class="Pagination-icon">&#171;</span>
+                <span class="Pagination-text">Página anterior</span>
+            </a>
         </li>
     {% endif %}
 
@@ -21,11 +25,15 @@
     {% endfor %}
 
     {% if articles_page.has_next() %}
-        <li class="Pagination-item">
+        <li class="Pagination-item Pagination-item--arrow">
             <a
                 class="Pagination-link"
                 href="{{ pagination.page_url(SITEURL, page_name) }}{{ articles_page.next_page_number() }}.html"
-                title="Próxima página">&#187;</a>
+                title="Próxima página">
+
+                <span class="Pagination-text">Próxima página</span>
+                <span class="Pagination-icon">&#187;</span>
+            </a>
         </li>
     {% endif %}
 </ul>

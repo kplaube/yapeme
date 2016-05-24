@@ -1,9 +1,13 @@
-$font-family: Georgia, sans-serif;
+$blockquote-border-color: rgba(0, 0, 0, .0625) !default;
+$code-background-color: #f0f0f0 !default;
+$font-family: Georgia, sans-serif !default;
+$img-border-color: #dcdcdc !default;
+$read-more-color: lighten($font-color, 30);
 
 .Article {
-  border-bottom: 1px solid rgba(0, 0, 0, .125);
-  padding-bottom: 40px;
-  padding-top: 40px;
+  border-bottom: 1px solid $separator-color;
+  padding-bottom: 2.5em;
+  padding-top: 2.5em;
 
   .is-fullEntry & {
     border-bottom: 0;
@@ -12,9 +16,11 @@ $font-family: Georgia, sans-serif;
 
 .Article-title {
   display: block;
-  font-size: 26px;
+  font-size: 1.8rem;
   font-weight: 500;
-  margin: 0 0 10px 0;
+  letter-spacing: -.0230em;
+  line-height: 1.12;
+  margin: 0 0 0.367em;
 
   .is-fullEntry & {
     font-size: 40px;
@@ -23,6 +29,7 @@ $font-family: Georgia, sans-serif;
 
 .Article-titleLink {
   color: $font-color;
+  display: block;
   text-decoration: none;
 }
 
@@ -34,10 +41,16 @@ $font-family: Georgia, sans-serif;
 
 .Article-content {
   font-family: $font-family;
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 1.12rem;
+  line-height: 1.5;
+  letter-spacing: -.004em;
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: Roboto, Helvetica, sans-serif;
     padding-top: 16px;
   }
@@ -52,16 +65,16 @@ $font-family: Georgia, sans-serif;
   }
 
   blockquote {
+    border-left: 2px solid $blockquote-border-color;
     color: lighten($font-color, 20);
-    border-left: 4px solid rgba(0, 0, 0, .0625);
+    font-style: italic;
     margin-left: 0;
     margin-right: 0;
-    font-style: italic;
     padding: 0 0 0 1.5rem;
   }
 
   code {
-    background: #f0f0f0;
+    background: $code-background-color;
     padding: 0 6px;
   }
 
@@ -74,14 +87,9 @@ $font-family: Georgia, sans-serif;
   }
 
   img {
-    border: 4px solid #dcdcdc;
+    border: 2px solid $img-border-color;
     height: auto;
     max-width: 100%;
-
-    &.align-left {
-      float: left;
-      max-width: 40%;
-    }
   }
 
   ul {
@@ -94,7 +102,6 @@ $font-family: Georgia, sans-serif;
 
   pre {
     padding: 15px;
-    white-space: pre;
     white-space: pre-wrap;
     word-wrap: break-word;
   }
@@ -102,15 +109,14 @@ $font-family: Georgia, sans-serif;
 }
 
 .Article-footer {
-  margin: -20px 0 0 0;
-  text-align: right;
+  margin: 0;
 
   .Article-readmore {
-    color: $font-color;
+    color: $read-more-color;
     font-family: Roboto, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: .75rem;
     font-weight: 500;
-    text-decoration: underline;
+    text-decoration: none;
 
     &:hover {
       text-decoration: none;
