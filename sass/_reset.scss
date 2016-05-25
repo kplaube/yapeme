@@ -1,6 +1,6 @@
 body,
 .pure-g [class *="pure-u"] {
-	font-family: Roboto, Helvetica, sans-serif;
+	font-family: map-get($font-family, roboto);
 }
 
 a {

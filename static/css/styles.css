@@ -1,3 +1,12 @@
+body,
+.pure-g [class*="pure-u"] {
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
+a {
+  color: #ea141f;
+}
+
 .u-box {
   padding: 1rem;
 }
@@ -16,15 +25,6 @@
   display: block;
   margin: 0 auto;
   width: 90%;
-}
-
-body,
-.pure-g [class*="pure-u"] {
-  font-family: Roboto, Helvetica, sans-serif;
-}
-
-a {
-  color: #ea141f;
 }
 
 .highlight .hll {
@@ -358,13 +358,13 @@ a {
 
 /* Literal.Number.Integer.Long */
 .Page {
-  color: #111111;
+  color: #333;
   margin: 0 auto;
   max-width: 768px;
 }
 
 .PageHeader-link, .PageHeader-menu-link {
-  color: #111111;
+  color: #333;
   text-transform: lowercase;
 }
 
@@ -389,18 +389,17 @@ a {
 }
 
 .PageFooter {
+  background: #f4f4f4;
   border-top: 1px solid rgba(0, 0, 0, 0.125);
-  font-family: Georgia, sans-serif;
-  font-size: 14px;
+  font-size: .88rem;
   font-style: italic;
-  padding-bottom: 96px;
-  padding-top: 96px;
+  padding-bottom: 6.819em;
+  padding-top: 6.819em;
   text-align: center;
 }
 
 .PageFooter .PageFooter-link {
-  color: #111111;
-  font-family: Roboto, Helvetica, sans-serif;
+  color: #333;
   font-weight: 500;
   text-decoration: underline;
 }
@@ -433,7 +432,7 @@ a {
 }
 
 .Article-titleLink {
-  color: #111111;
+  color: #333;
   display: block;
   text-decoration: none;
 }
@@ -472,7 +471,7 @@ a {
 
 .Article-content blockquote {
   border-left: 2px solid rgba(0, 0, 0, 0.0625);
-  color: #444444;
+  color: #666666;
   font-style: italic;
   margin-left: 0;
   margin-right: 0;
@@ -517,8 +516,7 @@ a {
 }
 
 .Article-footer .Article-readmore {
-  color: #5e5e5e;
-  font-family: Roboto, Helvetica, sans-serif;
+  color: gray;
   font-size: .75rem;
   font-weight: 500;
   text-decoration: none;
@@ -533,7 +531,6 @@ a {
 }
 
 .Article-tags {
-  font-family: Georgia, sans-serif;
   margin-bottom: 40px;
 }
 
@@ -546,11 +543,11 @@ a {
 }
 
 .Pagination-link {
-  border: 1px solid #5e5e5e;
-  color: #5e5e5e;
+  border: 1px solid gray;
+  color: gray;
   display: block;
   line-height: 3;
-  margin: 5px 0;
+  margin: .3125em 0;
   text-align: center;
   text-decoration: none;
 }

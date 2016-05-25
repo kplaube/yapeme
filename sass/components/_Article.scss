@@ -1,6 +1,5 @@
 $blockquote-border-color: rgba(0, 0, 0, .0625) !default;
 $code-background-color: #f0f0f0 !default;
-$font-family: Georgia, sans-serif !default;
 $img-border-color: #dcdcdc !default;
 $read-more-color: lighten($font-color, 30);
 
@@ -40,7 +39,7 @@ $read-more-color: lighten($font-color, 30);
 }
 
 .Article-content {
-  font-family: $font-family;
+  font-family: map-get($font-family, georgia);
   font-size: 1.12rem;
   line-height: 1.5;
   letter-spacing: -.004em;
@@ -51,7 +50,7 @@ $read-more-color: lighten($font-color, 30);
   h4,
   h5,
   h6 {
-    font-family: Roboto, Helvetica, sans-serif;
+    font-family: map-get($font-family, roboto);
     padding-top: 16px;
   }
 
@@ -113,7 +112,6 @@ $read-more-color: lighten($font-color, 30);
 
   .Article-readmore {
     color: $read-more-color;
-    font-family: Roboto, Helvetica, sans-serif;
     font-size: .75rem;
     font-weight: 500;
     text-decoration: none;
@@ -129,6 +127,5 @@ $read-more-color: lighten($font-color, 30);
 }
 
 .Article-tags {
-  font-family: $font-family;
   margin-bottom: 40px;
 }

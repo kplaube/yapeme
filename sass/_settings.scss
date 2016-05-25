@@ -1,4 +1,11 @@
-$font-color: rgb(17, 17, 17) !default;
-$link-color: #ea141f !default;
+$font-family-georgia: Georgia, sans-serif;
+$font-family-roboto: Roboto, Helvetica, sans-serif;
 
-$separator-color: rgba(0, 0, 0, .125) !default;
+$font-family: (
+  georgia: $font-family-georgia,
+  roboto: $font-family-roboto
+);
+
+$font-color: #333;
+$link-color: #ea141f;
+$separator-color: rgba(0, 0, 0, .125);
