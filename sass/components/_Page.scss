@@ -1,5 +1,8 @@
 .Page {
   color: $font-color;
+}
+
+.PageContent {
   margin: 0 auto;
-  max-width: 768px;
+  max-width: $max-width;
 }

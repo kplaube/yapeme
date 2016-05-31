@@ -12,6 +12,11 @@
   border-bottom: 1px solid $separator-color;
   font-size: 1.1rem;
   padding: .2em 0;
+
+  .pure-menu {
+    margin: 0 auto;
+    max-width: $max-width;
+  }
 }
 
 .PageHeader-menu {

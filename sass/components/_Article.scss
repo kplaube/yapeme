@@ -8,8 +8,10 @@ $tag-font-color: lighten($font-color, 30);
 
 .Article {
   border-bottom: 1px solid $separator-color;
-  padding-bottom: 2.5em;
+  overflow: auto;
+  padding-bottom: 1.5em;
   padding-top: 2.5em;
+  position: relative;
 
   .is-fullEntry & {
     border-bottom: 0;
@@ -74,7 +76,7 @@ $tag-font-color: lighten($font-color, 30);
 
   code {
     background: $code-background-color;
-    padding: 0 .34em;
+    padding: 0 .3em;
     word-wrap: break-word;
   }
 
@@ -89,7 +91,6 @@ $tag-font-color: lighten($font-color, 30);
   img {
     border: 2px solid $img-border-color;
     height: auto;
-    max-width: 100%;
   }
 
   ul {
@@ -107,16 +108,27 @@ $tag-font-color: lighten($font-color, 30);
     word-wrap: break-word;
   }
 
+  @media screen and (min-width: 620px) {
+    font-size: 1.3rem;
+
+    pre {
+      font-size: 1.1rem;
+    }
+  }
+
 }
 
 .Article-footer {
   margin: 0;
 
   .Article-readmore {
+    bottom: 1em;
     color: $read-more-color;
     font-family: map-get($font-family, roboto);
     font-size: .75rem;
     font-weight: 500;
+    position: absolute;
+    right: 1em;
     text-decoration: none;
 
     &:hover {
@@ -144,7 +156,8 @@ $tag-font-color: lighten($font-color, 30);
   border-radius: 4px;
   color: $tag-font-color;
   display: inline-block;
+  font-size: .9rem;
   margin: 0 .5em .5em 0;
-  padding: .65em;
+  padding: .6em;
   text-decoration: none;
 }
