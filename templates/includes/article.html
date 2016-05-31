@@ -37,9 +37,12 @@
     {% if not is_summary %}
         {% if article.tags %}
             <div class="Article-tags">
-                Tags:
+                <span class="Article-tagLabel">Tags:</span>
                 {% for tag in article.tags %}
-                <a href="{{ SITEURL }}/{{ tag.url }}" title="Leia mais sobre {{ tag }}">{{ tag }}</a>{% if loop.last %}.{% else %}, {% endif %} 
+                    <a
+                        href="{{ SITEURL }}/{{ tag.url }}"
+                        title="Leia mais sobre {{ tag }}"
+                        class="Article-tagLink">{{ tag }}</a>
                 {% endfor %}
             </div>
         {% endif %}

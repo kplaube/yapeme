@@ -23,7 +23,7 @@ a {
 
 .align-left {
   display: block;
-  margin: 0 auto;
+  margin: 1em auto;
   width: 90%;
 }
 
@@ -416,6 +416,7 @@ a {
 
 .is-fullEntry .Article {
   border-bottom: 0;
+  padding-bottom: 0;
 }
 
 .Article-title {
@@ -424,11 +425,7 @@ a {
   font-weight: 500;
   letter-spacing: -.0230em;
   line-height: 1.12;
-  margin: 0 0 0.367em;
-}
-
-.is-fullEntry .Article-title {
-  font-size: 40px;
+  margin: 0 0 .367em;
 }
 
 .Article-titleLink {
@@ -446,8 +443,8 @@ a {
 .Article-content {
   font-family: Georgia, sans-serif;
   font-size: 1.12rem;
-  line-height: 1.5;
   letter-spacing: -.004em;
+  line-height: 1.5;
 }
 
 .Article-content h1,
@@ -480,7 +477,8 @@ a {
 
 .Article-content code {
   background: #f0f0f0;
-  padding: 0 6px;
+  padding: 0 .34em;
+  word-wrap: break-word;
 }
 
 .Article-content h2 {
@@ -506,7 +504,8 @@ a {
 }
 
 .Article-content pre {
-  padding: 15px;
+  font-size: 1rem;
+  padding: .63em;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
@@ -516,7 +515,8 @@ a {
 }
 
 .Article-footer .Article-readmore {
-  color: gray;
+  color: #b3b3b3;
+  font-family: Roboto, Helvetica, sans-serif;
   font-size: .75rem;
   font-weight: 500;
   text-decoration: none;
@@ -527,11 +527,27 @@ a {
 }
 
 .Article-comments {
-  padding-top: 40px;
+  padding-bottom: 1em;
+  padding-top: 2.5em;
 }
 
 .Article-tags {
-  margin-bottom: 40px;
+  margin: 2.5em 0;
+}
+
+.Article-tagLabel {
+  display: none;
+}
+
+.Article-tagLink {
+  background: #f5f5f5;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  color: gray;
+  display: inline-block;
+  margin: 0 .5em .5em 0;
+  padding: .65em;
+  text-decoration: none;
 }
 
 .Pagination-item {
