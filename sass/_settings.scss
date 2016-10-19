@@ -7,6 +7,7 @@ $font-family: (
 );
 
 $font-color: #333;
+$secondary-font-color: lighten($font-color, 40%);
 $link-color: #ea141f;
 $separator-color: rgba(0, 0, 0, .125);
 

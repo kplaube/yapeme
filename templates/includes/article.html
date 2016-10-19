@@ -12,12 +12,6 @@
                 </a>
             {% endif %}
         </h1>
-
-        {#
-        <time
-            class="Article-pubDate"
-            datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
-        #}
     </header>
 
     <div class="Article-content">
@@ -35,6 +29,11 @@
     </div>
 
     {% if not is_summary %}
+        <span class="Article-pubDate">
+            Published on
+            <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+        </span>
+
         {% if article.tags %}
             <div class="Article-tags">
                 <span class="Article-tagLabel">Tags:</span>

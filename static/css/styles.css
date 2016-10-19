@@ -454,9 +454,13 @@ a {
 }
 
 .Article-pubDate {
-  font-size: 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  color: #999999;
+  display: block;
+  font-size: 14px;
+  font-style: italic;
   font-weight: 500;
-  text-transform: uppercase;
+  padding-top: .8rem;
 }
 
 .Article-content {
@@ -562,7 +566,7 @@ a {
 }
 
 .Article-tags {
-  margin: 2.5em 0;
+  margin: 2em 0 2.5em;
 }
 
 .Article-tagLabel {
