@@ -7,10 +7,10 @@
             <a
                 class="Pagination-link"
                 href="{{ pagination.page_url(SITEURL, page_name) }}{% if articles_page.previous_page_number() > 1 %}{{ articles_page.previous_page_number() }}{% endif %}.html"
-                title="Página anterior">
+                title="{{ gettext('Previous page') }}">
 
                 <span class="Pagination-icon">&#171;</span>
-                <span class="Pagination-text">Página anterior</span>
+                <span class="Pagination-text">{{ gettext('Previous page') }}</span>
             </a>
         </li>
     {% endif %}
@@ -20,7 +20,7 @@
             <a
                 class="Pagination-link{% if articles_page.number == page_number %} Pagination-link--active{% endif %}"
                 href="{{ pagination.page_url(SITEURL, page_name) }}{% if page_number > 1 %}{{ page_number }}{% endif %}.html"
-                title="Página {{ page_number }}">{{ page_number }}</a>
+                title="{% trans %}Page {{ page_number }}{% endtrans %}">{{ page_number }}</a>
         </li>
     {% endfor %}
 
@@ -29,9 +29,9 @@
             <a
                 class="Pagination-link"
                 href="{{ pagination.page_url(SITEURL, page_name) }}{{ articles_page.next_page_number() }}.html"
-                title="Próxima página">
+                title="{{ gettext('Next page') }}">
 
-                <span class="Pagination-text">Próxima página</span>
+                <span class="Pagination-text">{{ gettext('Next page') }}</span>
                 <span class="Pagination-icon">&#187;</span>
             </a>
         </li>

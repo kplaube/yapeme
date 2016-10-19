@@ -4,9 +4,8 @@
 
         <a
 			href="{{ SITEURL }}/index.html"
-			title="Home page"
-            class="PageHeader-link pure-menu-heading pure-menu-link"
-        >{{sitename[0] }}{% if sitename|length > 1 %}<span class="u-highlighted">{{ sitename[1:]|join(' ') }}{% endif %}</a>
+            title="{{ gettext('Home page') }}"
+            class="PageHeader-link pure-menu-heading pure-menu-link">{{sitename[0] }}{% if sitename|length > 1 %}<span class="u-highlighted">{{ sitename[1:]|join(' ') }}{% endif %}</a>
 
 		{% if DISPLAY_PAGES_ON_MENU %}
 			<ul class="PageHeader-menu pure-menu-list">

@@ -1,0 +1,74 @@
+# English translations for PROJECT.
+# Copyright (C) 2016 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2016-10-19 18:50-0200\n"
+"PO-Revision-Date: 2016-10-19 19:40-0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: templates/tag.html:3 templates/tag.html:4 templates/tag.html:8
+#, python-format
+msgid "Posts with %(tag)s"
+msgstr ""
+
+#: templates/includes/article.html:8
+msgid "Read more"
+msgstr ""
+
+#: templates/includes/article.html:24
+msgid "Read the full article"
+msgstr ""
+
+#: templates/includes/article.html:24
+msgid "Read more..."
+msgstr ""
+
+#: templates/includes/article.html:33
+msgid "Published on"
+msgstr ""
+
+#: templates/includes/article.html:39
+msgid "Tags"
+msgstr ""
+
+#: templates/includes/article.html:43
+msgid "Read more about"
+msgstr ""
+
+#: templates/includes/footer.html:3
+msgid "The content of this blog is under"
+msgstr ""
+
+#: templates/includes/footer.html:9
+msgid "The source code is available in"
+msgstr ""
+
+#: templates/includes/header.html:7
+msgid "Home page"
+msgstr ""
+
+#: templates/includes/pagination.html:10 templates/includes/pagination.html:13
+msgid "Previous page"
+msgstr ""
+
+#: templates/includes/pagination.html:23
+#, python-format
+msgid "Page %(page_number)s"
+msgstr ""
+
+#: templates/includes/pagination.html:32 templates/includes/pagination.html:34
+msgid "Next page"
+msgstr ""
+

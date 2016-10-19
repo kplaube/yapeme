@@ -5,7 +5,7 @@
                 <a
                     class="Article-titleLink"
                     href="{{ SITEURL }}/{{ article.url }}"
-                    title="Read more">
+                    title="{{ gettext('Read more') }}">
             {% endif %}
             {{ article.title }}
             {% if is_summary %}
@@ -21,7 +21,7 @@
                 <a
                     class="Article-readmore"
                     href="{{ SITEURL }}/{{ article.url }}"
-                    title="Leia o artigo completo">Leia mais...</a>
+                    title="{{ gettext('Read the full article') }}">{{ gettext('Read more...') }}</a>
             </p>
         {% else %}
             {{ article.content }}
@@ -30,17 +30,17 @@
 
     {% if not is_summary %}
         <span class="Article-pubDate">
-            Published on
+            {{ gettext('Published on') }}
             <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
         </span>
 
         {% if article.tags %}
             <div class="Article-tags">
-                <span class="Article-tagLabel">Tags:</span>
+                <span class="Article-tagLabel">{{ gettext('Tags') }}:</span>
                 {% for tag in article.tags %}
                     <a
                         href="{{ SITEURL }}/{{ tag.url }}"
-                        title="Leia mais sobre {{ tag }}"
+                        title="{{ gettext('Read more about') }}"
                         class="Article-tagLink">{{ tag }}</a>
                 {% endfor %}
             </div>
