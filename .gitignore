@@ -1,5 +1,5 @@
 .sass-cache/
 env/
 node_modules/
-bower_components/
 *.map
+static/share-bar/

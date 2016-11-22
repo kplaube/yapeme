@@ -1,1 +1,3 @@
-Babel==2.3.4
+Babel
+pyscss
+cssmin
