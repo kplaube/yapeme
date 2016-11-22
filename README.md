@@ -7,34 +7,29 @@ You can check it live in my [blog](http://klauslaube.com.br/).
 
 Contributions are welcome!
 
-Requirements
-------------
-
-We're using cool technologies, like:
-
-* [Sass](http://sass-lang.com/)
-* [Grunt](http://gruntjs.com/)
-* [Pure.CSS](http://purecss.io/)
-
-The only thing you'll need to install is [NodeJS/NPM](https://nodejs.org/) and [Bower](http://bower.io/).
-
 Installing
 ----------
 
-You can install Grunt-CLI and all project's dependencies throught `install` task:
+Before installing the theme, make sure you have [Bower](http://bower.io/) installed. If don't, you can install it through `npm`:
+
+```$ npm install -g bower```
+
+Now you can install all project's dependencies via `install` task:
 
 ```$ make install```
 
-It's done! Now you can run the build process through `run`:
+It'll install cool things like [PySCSS](http://pyscss.readthedocs.io/en/latest/).
+
+Now you can run the build process:
 
 ```$ make run```
 
-It'll watch the project's assets and run all build process after a change.
+It'll run the Pelican development server.
 
 Configuration
 -------------
 
-You need to edit your settings and add the following parameters (they aren't required):
+You need to edit your settings and add the following parameters:
 
 ```
 AUTHOR = "Author's name"
@@ -61,8 +56,10 @@ Plugins
 
 This theme uses the following Pelican plugins:
 
+* [assets](https://github.com/getpelican/pelican-plugins/tree/master/assets)
 * [extended_meta](https://github.com/kplaube/extended_meta)
 * [i18n_subsites](https://github.com/getpelican/pelican-plugins/tree/master/i18n_subsites)
+* [liquid_tags](https://github.com/getpelican/pelican-plugins/tree/master/liquid_tags)
 
 And a Javascript widget for share buttons:
 
