@@ -59,9 +59,13 @@ SOURCE_CODE_URL = "Where the source code of your blog is"
 Plugins
 -------
 
-This theme uses the following plugins:
+This theme uses the following Pelican plugins:
 
-* [Extended Meta](https://github.com/kplaube/extended_meta)
+* [extended_meta](https://github.com/kplaube/extended_meta)
+* [i18n_subsites](https://github.com/getpelican/pelican-plugins/tree/master/i18n_subsites)
+
+And a Javascript widget for share buttons:
+
 * [globocom/Share Bar](https://github.com/globocom/share-bar)
 
 Screenshot
