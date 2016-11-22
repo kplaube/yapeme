@@ -40,7 +40,9 @@
   {% block styles %}
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
     <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Roboto'>
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/styles.css">
+    {% assets filters="pyscss,cssmin", output="css/styles.min.css", "sass/styles.scss" %}
+      <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
+    {% endassets %}
   {% endblock %}
 </head>
 <body>
