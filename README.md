@@ -20,12 +20,6 @@ Now you can install all project's dependencies via `install` task:
 
 It'll install cool things like [PySCSS](http://pyscss.readthedocs.io/en/latest/).
 
-Now you can run the build process:
-
-```$ make run```
-
-It'll run the Pelican development server.
-
 Configuration
 -------------
 
