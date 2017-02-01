@@ -1,48 +1,56 @@
-<article class="Article u-box">
-    <header>
-        <h1 class="Article-title">
-            {% if is_summary %}
-                <a
-                    class="Article-titleLink"
-                    href="{{ SITEURL }}/{{ article.url }}"
-                    title="{{ gettext('Read more') }}">
-            {% endif %}
-            {{ article.title }}
-            {% if is_summary %}
-                </a>
-            {% endif %}
-        </h1>
-    </header>
+<article class="Article u-box" itemscope="" itemtype="http://schema.org/BlogPosting">
+    <span itemprop="mainEntityOfPage">
+        <header>
+            <h1 class="Article-title" itemprop="headline name">
+                {% if is_summary %}
+                    <a
+                        class="Article-titleLink"
+                        href="{{ SITEURL }}/{{ article.url }}"
+                        title="{{ gettext('Read more') }}">
+                {% endif %}
+                {{ article.title }}
+                {% if is_summary %}
+                    </a>
+                {% endif %}
+            </h1>
+        </header>
 
-    <div class="Article-content">
-        {% if is_summary %}
-            {{ article.summary }}
-            <p class="Article-footer">
-                <a
-                    class="Article-readmore"
-                    href="{{ SITEURL }}/{{ article.url }}"
-                    title="{{ gettext('Read the full article') }}">{{ gettext('Read more...') }}</a>
-            </p>
-        {% else %}
-            {{ article.content }}
-        {% endif %}
-    </div>
+        <div class="Article-content" itemprop="articleBody">
+            {% if is_summary %}
+                {{ article.summary }}
+                <p class="Article-footer">
+                    <a
+                        class="Article-readmore"
+                        href="{{ SITEURL }}/{{ article.url }}"
+                        title="{{ gettext('Read the full article') }}">{{ gettext('Read more...') }}</a>
+                </p>
+            {% else %}
+                {{ article.content }}
+            {% endif %}
+        </div>
+    </span>
 
     {% if not is_summary %}
-        <span class="Article-pubDate">
-            {{ gettext('Published on') }}
-            <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
-        </span>
+        <div class="Article-meta">
+            {{ gettext('By') }} <span class="Article-author" itemprop="author">{{ AUTHOR }}</span>.
+
+            <span class="Article-pubDate">
+                {{ gettext('Published on') }}
+                <time datetime="{{ article.date.isoformat() }}" itemprop="datePublished">{{ article.locale_date }}</time>
+            </span>
+        </div>
 
         {% if article.tags %}
             <div class="Article-tags">
                 <span class="Article-tagLabel">{{ gettext('Tags') }}:</span>
-                {% for tag in article.tags %}
-                    <a
-                        href="{{ SITEURL }}/{{ tag.url }}"
-                        title="{{ gettext('Read more about') }}"
-                        class="Article-tagLink">{{ tag }}</a>
-                {% endfor %}
+                <span itemprop="keywords">
+                    {% for tag in article.tags %}
+                        <a
+                            href="{{ SITEURL }}/{{ tag.url }}"
+                            title="{{ gettext('Read more about') }}"
+                            class="Article-tagLink">{{ tag }}</a>
+                    {% endfor %}
+                </span>
             </div>
         {% endif %}
 
