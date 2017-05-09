@@ -5,6 +5,7 @@ $read-more-color: lighten($font-color, 50);
 $tag-background-color: #f5f5f5;
 $tag-border-color: #f0f0f0;
 $tag-font-color: lighten($font-color, 30);
+$share-border-color: $tag-border-color;
 
 .Article {
   border-bottom: 1px solid $separator-color;
@@ -37,10 +38,9 @@ $tag-font-color: lighten($font-color, 30);
 .Article-meta {
   color: $secondary-font-color;
   display: block;
-  font-size: 14px;
-  font-style: italic;
+  font-size: 12px;
   font-weight: 500;
-  margin-top: .5em;
+  margin-top: -.5em;
   padding: 0;
 }
 
@@ -147,7 +147,12 @@ $tag-font-color: lighten($font-color, 30);
 }
 
 .Article-tags {
-  margin: 2em 0 2.5em;
+  margin: 2em 0 1em;
+}
+
+.Article-share {
+  border-top: 1px solid $share-border-color;
+  padding-top: 1em;
 }
 
 .Article-tagLabel {

@@ -11,17 +11,19 @@
                 {{ article.title }}
                 {% if is_summary %}
                     </a>
-                {% else %}
-                    <p class="Article-meta">
-                        {{ gettext('By') }} <span class="Article-author" itemprop="author">{{ AUTHOR }}</span>.
-
-                        <span class="Article-pubDate">
-                            {{ gettext('Published on') }}
-                            <time datetime="{{ article.date.isoformat() }}" itemprop="datePublished">{{ article.locale_date }}</time>
-                        </span>
-                    </p>
                 {% endif %}
             </h1>
+
+            {% if not is_summary %}
+                <p class="Article-meta">
+                    {{ gettext('By') }} <span class="Article-author" itemprop="author">{{ AUTHOR }}</span>.
+
+                    <span class="Article-pubDate">
+                        {{ gettext('Published on') }}
+                        <time datetime="{{ article.date.isoformat() }}" itemprop="datePublished">{{ article.locale_date }}</time>
+                    </span>
+                </p>
+            {% endif %}
         </header>
 
         <div class="Article-content" itemprop="articleBody">
