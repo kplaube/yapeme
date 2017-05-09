@@ -1,4 +1,9 @@
 <article class="Article u-box" itemscope="" itemtype="http://schema.org/BlogPosting">
+    {% if article.meta %}
+        <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop="url" content="{{ article.meta.og_image }}">
+        </div>
+    {% endif %}
     <span itemprop="mainEntityOfPage">
         <header>
             <h1 class="Article-title" itemprop="headline name">
