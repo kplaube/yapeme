@@ -11,6 +11,15 @@
                 {{ article.title }}
                 {% if is_summary %}
                     </a>
+                {% else %}
+                    <p class="Article-meta">
+                        {{ gettext('By') }} <span class="Article-author" itemprop="author">{{ AUTHOR }}</span>.
+
+                        <span class="Article-pubDate">
+                            {{ gettext('Published on') }}
+                            <time datetime="{{ article.date.isoformat() }}" itemprop="datePublished">{{ article.locale_date }}</time>
+                        </span>
+                    </p>
                 {% endif %}
             </h1>
         </header>
@@ -19,10 +28,12 @@
             {% if is_summary %}
                 {{ article.summary }}
                 <p class="Article-footer">
+                    {{ gettext('On') }} <time datetime="{{ article.date.isoformat() }}" itemprop="datePublished">{{ article.locale_date }}</time>
+                    /
                     <a
                         class="Article-readmore"
                         href="{{ SITEURL }}/{{ article.url }}"
-                        title="{{ gettext('Read the full article') }}">{{ gettext('Read more...') }}</a>
+                        title="{{ gettext('Read the full article') }}">{{ gettext('Read more &gt') }}</a>
                 </p>
             {% else %}
                 {{ article.content }}
@@ -31,14 +42,6 @@
     </span>
 
     {% if not is_summary %}
-        <div class="Article-meta">
-            {{ gettext('By') }} <span class="Article-author" itemprop="author">{{ AUTHOR }}</span>.
-
-            <span class="Article-pubDate">
-                {{ gettext('Published on') }}
-                <time datetime="{{ article.date.isoformat() }}" itemprop="datePublished">{{ article.locale_date }}</time>
-            </span>
-        </div>
 
         {% if article.tags %}
             <div class="Article-tags">

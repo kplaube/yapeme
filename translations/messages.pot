@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-05-09 12:10-0300\n"
+"POT-Creation-Date: 2017-05-09 12:28-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,27 +26,31 @@ msgstr ""
 msgid "Read more"
 msgstr ""
 
-#: templates/includes/article.html:25
+#: templates/includes/article.html:22
+msgid "On"
+msgstr ""
+
+#: templates/includes/article.html:27
 msgid "Read the full article"
 msgstr ""
 
-#: templates/includes/article.html:25
-msgid "Read more..."
+#: templates/includes/article.html:27
+msgid "Read more &gt"
 msgstr ""
 
-#: templates/includes/article.html:35
+#: templates/includes/article.html:37
 msgid "By"
 msgstr ""
 
-#: templates/includes/article.html:38
+#: templates/includes/article.html:40
 msgid "Published on"
 msgstr ""
 
-#: templates/includes/article.html:45
+#: templates/includes/article.html:47
 msgid "Tags"
 msgstr ""
 
-#: templates/includes/article.html:50
+#: templates/includes/article.html:52
 msgid "Read more about"
 msgstr ""
 

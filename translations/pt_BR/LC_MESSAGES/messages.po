@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-05-09 12:10-0300\n"
+"POT-Creation-Date: 2017-05-09 12:28-0300\n"
 "PO-Revision-Date: 2016-10-19 18:52-0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt_BR\n"
@@ -27,27 +27,31 @@ msgstr "Posts com %(tag)s"
 msgid "Read more"
 msgstr "Leia mais"
 
-#: templates/includes/article.html:25
+#: templates/includes/article.html:22
+msgid "On"
+msgstr "Em"
+
+#: templates/includes/article.html:27
 msgid "Read the full article"
 msgstr "Leia o artigo completo"
 
-#: templates/includes/article.html:25
-msgid "Read more..."
-msgstr "Leia mais..."
+#: templates/includes/article.html:27
+msgid "Read more &gt"
+msgstr "Leia mais &gt"
 
-#: templates/includes/article.html:35
+#: templates/includes/article.html:37
 msgid "By"
 msgstr "Por"
 
-#: templates/includes/article.html:38
+#: templates/includes/article.html:40
 msgid "Published on"
 msgstr "Publicado em"
 
-#: templates/includes/article.html:45
+#: templates/includes/article.html:47
 msgid "Tags"
 msgstr "Tags"
 
-#: templates/includes/article.html:50
+#: templates/includes/article.html:52
 msgid "Read more about"
 msgstr "Leia mais sobre"
 
@@ -75,4 +79,3 @@ msgstr "Página %(page_number)s"
 #: templates/includes/pagination.html:32 templates/includes/pagination.html:34
 msgid "Next page"
 msgstr "Próxima página"
-

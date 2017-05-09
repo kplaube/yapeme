@@ -35,13 +35,13 @@ $tag-font-color: lighten($font-color, 30);
 }
 
 .Article-meta {
-  border-top: 1px solid $separator-color;
   color: $secondary-font-color;
   display: block;
   font-size: 14px;
   font-style: italic;
   font-weight: 500;
-  padding-top: .8rem;
+  margin-top: .5em;
+  padding: 0;
 }
 
 .Article-content {
@@ -123,16 +123,16 @@ $tag-font-color: lighten($font-color, 30);
 }
 
 .Article-footer {
+  bottom: 1em;
+  color: $read-more-color;
+  font-family: map-get($font-family, roboto);
+  font-size: .75rem;
+  font-weight: 500;
   margin: 0;
+  position: absolute;
+  right: 1em;
 
   .Article-readmore {
-    bottom: 1em;
-    color: $read-more-color;
-    font-family: map-get($font-family, roboto);
-    font-size: .75rem;
-    font-weight: 500;
-    position: absolute;
-    right: 1em;
     text-decoration: none;
 
     &:hover {
