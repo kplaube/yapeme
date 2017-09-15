@@ -25,6 +25,8 @@
 
 .PageHeader-link {
   @extend %header-link;
+
+  float: left;
 }
 
 .PageHeader-menu-link {
