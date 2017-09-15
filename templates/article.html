@@ -5,12 +5,6 @@
 {% block description %}{{ article.meta.description }}{% endblock %}
 {% block robots %}{{ article.meta.robots }}{% endblock %}
 
-{% block styles %}
-  {{ super() }}
-
-  <link rel="stylesheet" href="{{ SITEURL }}/theme/share-bar/dist/css/share.bar.min.css">
-{% endblock %}
-
 {% block page_css %}is-fullEntry{% endblock %}
 
 {% block content %}
@@ -23,8 +17,9 @@
 {% block scripts %}
   {{ super() }}
 
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/share-bar/dist/css/share.bar.min.css">
   <script src="{{ SITEURL }}/theme/share-bar/dist/js/share.bar.min.js"></script>
-  <script>
+  <script async>
     new ShareBar({
         facebookAppId: {{ FACEBOOK_APP_ID }}
     });
