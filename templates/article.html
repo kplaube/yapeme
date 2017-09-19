@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 
 {% block title %}{{ article.title }}{% endblock %}
-{% block canonical_url %}{{ article.meta.canonical }}{% endblock %}
-{% block description %}{{ article.meta.description }}{% endblock %}
-{% block robots %}{{ article.meta.robots }}{% endblock %}
+
+{% block canonical_url %}{% if article.meta %}{{ article.meta.canonical }}{% endif %}{% endblock %}
+{% block description %}{% if article.meta %}{{ article.meta.description }}{% endif %}{% endblock %}
+{% block robots %}{% if article.meta %}{{ article.meta.robots }}{% endif %}{% endblock %}
 
 {% block page_css %}is-fullEntry{% endblock %}
 
