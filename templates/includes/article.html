@@ -1,7 +1,13 @@
 <article class="Article u-box" itemscope="" itemtype="http://schema.org/BlogPosting">
     {% if article.meta %}
         <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-            <meta itemprop="url" content="{{ article.meta.og_image }}">
+            {% if article.meta.og_image %}
+              <meta itemprop="url" content="{{ article.meta.og_image }}">
+            {% elif article.ogtags %}
+              <meta itemprop="url" content="{{ article.og_image }}">
+            {% else %}
+              <meta itemprop="url" content="{{ FAVICON_URL }}"
+            {% endif %}
         </div>
     {% endif %}
     <span itemprop="mainEntityOfPage">
