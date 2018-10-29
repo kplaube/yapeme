@@ -10,12 +10,18 @@
 
   <meta property="og:site_name" content="{{ SITENAME }}">
   <meta property="og:type" content="website">
-  {% if article and article.meta %}
-    <meta name="keywords" content="{{ article.meta.keywords }}">
-    <meta property="og:title" content="{{ article.meta.og_title }}">
-    <meta property="og:description" content="{{ article.meta.og_description }}">
-    <meta property="og:url" content="{{ article.meta.og_url }}">
-    <meta property="og:image" content="{{ article.meta.og_image }}">
+  {% if article %}
+    {% if article.meta %}
+      <meta name="keywords" content="{{ article.meta.keywords }}">
+      <meta property="og:title" content="{{ article.meta.og_title }}">
+      <meta property="og:description" content="{{ article.meta.og_description }}">
+      <meta property="og:url" content="{{ article.meta.og_url }}">
+      <meta property="og:image" content="{{ article.meta.og_image }}">
+    {% elif article.ogtags %}
+      {% for tag in article.ogtags %}
+        <meta property="{{tag[0]}}" content="{{tag[1]|striptags|e}}" />
+      {% endfor %}
+    {% endif %}
   {% elif DEFAULT_OG_IMAGE %}
     <meta property="og:image" content="{{ DEFAULT_OG_IMAGE }}">
   {% endif %}
