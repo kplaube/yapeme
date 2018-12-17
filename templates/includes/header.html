@@ -7,11 +7,17 @@
             title="{{ gettext('Home page') }}"
             class="PageHeader-link pure-menu-heading pure-menu-link">{{sitename[0] }}{% if sitename|length > 1 %}<span class="u-highlighted">{{ sitename[1:]|join(' ') }}{% endif %}</a>
 
-		{% if DISPLAY_PAGES_ON_MENU %}
+		{% if DISPLAY_PAGES_ON_MENU or MENUITEMS %}
 			<ul class="PageHeader-menu pure-menu-list">
                 {% for p in pages %}
                     <li class="pure-menu-item">
                         <a href="{{ SITEURL }}/{{ p.url }}" class="PageHeader-menu-link pure-menu-link">{{ p.title }}</a>
+                    </li>
+                {% endfor %}
+
+                {% for title, uri in MENUITEMS %}
+                    <li class="pure-menu-item">
+                        <a href="{{ uri }}" class="PageHeader-menu-link pure-menu-link">{{ title }}</a>
                     </li>
                 {% endfor %}
 			</ul>
