@@ -10,4 +10,4 @@ install:
 	@echo "Installing Bower dependencies..."
 	@bower install
 	@echo "Installing Python dependencies..."
-	@pip install -r requirements.txt
+	@pipenv install

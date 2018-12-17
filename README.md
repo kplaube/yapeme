@@ -10,13 +10,14 @@ Contributions are welcome!
 Installing
 ----------
 
-Before installing the theme, make sure you have [Bower](http://bower.io/) installed. If don't, you can install it through `npm`:
+Before installing the theme, make sure you have [Bower](http://bower.io/) and [Pipenv](https://github.com/pypa/pipenv) installed:
 
-```$ npm install -g bower```
+    $ npm install -g bower
+    $ brew install pipenv
 
 Now you can install all project's dependencies via `install` task:
 
-```$ make install```
+    $ make install
 
 It'll install cool things like [PySCSS](http://pyscss.readthedocs.io/en/latest/).
 
@@ -66,35 +67,25 @@ Translations
 
 You can find our translations inside `translations/` folder. If you want to contribute, please follow the instructions below:
 
-```
-$ pybabel extract --mapping babel.cfg --output translations/messages.pot ./
-```
+    $ pybabel extract --mapping babel.cfg --output translations/messages.pot ./
 
 This is going to create the "translations template" for the project. After that, if you want to create a new language translation:
 
-```
-$ pybabel init --input-file translations/messages.pot --output-dir translations/ --locale pt_BR --domain messages
-```
+    $ pybabel init --input-file translations/messages.pot --output-dir translations/ --locale pt_BR --domain messages
 
 Or if you want to update a already created language file:
 
-```
-$ pybabel update --input-file translations/messages.pot --output-dir translations --locale pt_BR --domain messages
-```
+    $ pybabel update --input-file translations/messages.pot --output-dir translations --locale pt_BR --domain messages
 
 Now you can update the `msgstr` with the proper translation:
 
-```
-#: templates/includes/article.html:35
-msgid "By"
-msgstr "Por"
-```
+    #: templates/includes/article.html:35
+    msgid "By"
+    msgstr "Por"
 
 To conclude the translation, we need to compile the language file:
 
-```
-$ pybabel compile -d translations
-```
+    $ pybabel compile -d translations
 
 Don't forget to configure your [Pelican instance properly](http://docs.getpelican.com/en/stable/content.html#translations).
 
