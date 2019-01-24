@@ -18,11 +18,9 @@
 {% block scripts %}
   {{ super() }}
 
-  <link rel="stylesheet" href="{{ SITEURL }}/theme/share-bar/dist/css/share.bar.min.css">
-  <script src="{{ SITEURL }}/theme/share-bar/dist/js/share.bar.min.js"></script>
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/vendor/@globocom/share-bar/dist/css/share.bar.min.css">
+  <script src="{{ SITEURL }}/theme/vendor/@globocom/share-bar/dist/js/share.bar.min.js"></script>
   <script async>
-    new ShareBar({
-        facebookAppId: {{ FACEBOOK_APP_ID }}
-    });
+    new ShareBar();
   </script>
 {% endblock %}

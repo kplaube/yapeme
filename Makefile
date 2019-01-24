@@ -7,7 +7,7 @@ help:
 	@echo '                                                                   '
 
 install:
-	@echo "Installing Bower dependencies..."
-	@bower install
+	@echo "Installing Node dependencies..."
+	@yarn install --modules-folder ./static/vendor
 	@echo "Installing Python dependencies..."
 	@pipenv install

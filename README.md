@@ -1,5 +1,4 @@
-yapeme
-======
+# yapeme
 
 Yapeme (Yet Another PElican theME) is a responsive theme for Pelican.
 
@@ -7,22 +6,17 @@ You can check it live in my [blog](http://klauslaube.com.br/).
 
 Contributions are welcome!
 
-Installing
-----------
+## Installing
 
-Before installing the theme, make sure you have [Bower](http://bower.io/) and [Pipenv](https://github.com/pypa/pipenv) installed:
+Before installing the theme, make sure you have [Yarn](https://yarnpkg.com/en/) and [Pipenv](https://github.com/pypa/pipenv) installed:
 
-    $ npm install -g bower
-    $ brew install pipenv
+    $ brew install node pipenv
 
 Now you can install all project's dependencies via `install` task:
 
     $ make install
 
-It'll install cool things like [PySCSS](http://pyscss.readthedocs.io/en/latest/).
-
-Configuration
--------------
+## Configuration
 
 You need to edit your settings and add the following parameters:
 
@@ -48,23 +42,20 @@ SOURCE_CODE_REPOSITORY = "GitHub"
 SOURCE_CODE_URL = "Where the source code of your blog is"
 ```
 
-Plugins
--------
+## Plugins
 
 This theme uses the following Pelican plugins:
 
-* [assets](https://github.com/getpelican/pelican-plugins/tree/master/assets)
-* [extended_meta](https://github.com/kplaube/extended_meta)
-* [i18n_subsites](https://github.com/getpelican/pelican-plugins/tree/master/i18n_subsites)
-* [liquid_tags](https://github.com/getpelican/pelican-plugins/tree/master/liquid_tags)
+- [assets](https://github.com/getpelican/pelican-plugins/tree/master/assets)
+- [extended_meta](https://github.com/kplaube/extended_meta)
+- [i18n_subsites](https://github.com/getpelican/pelican-plugins/tree/master/i18n_subsites)
+- [liquid_tags](https://github.com/getpelican/pelican-plugins/tree/master/liquid_tags)
 
 And a Javascript widget for share buttons:
 
-* [globocom/Share Bar](https://github.com/globocom/share-bar)
+- [globocom/Share Bar](https://github.com/globocom/share-bar)
 
-
-Translations
-------------
+## Translations
 
 You can find our translations inside `translations/` folder. If you want to contribute, please follow the instructions below:
 
@@ -90,8 +81,6 @@ To conclude the translation, we need to compile the language file:
 
 Don't forget to configure your [Pelican instance properly](http://docs.getpelican.com/en/stable/content.html#translations).
 
-
-Screenshot
-----------
+## Screenshot
 
 ![screenshot](docs/screenshot.png)
