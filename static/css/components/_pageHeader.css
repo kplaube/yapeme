@@ -1,0 +1,35 @@
+.PageHeader-link,
+.PageHeader-menu-link {
+  color: var(--font-color);
+  text-transform: lowercase;
+}
+
+.PageHeader-link:hover,
+.PageHeader-menu-link:hover {
+  background: transparent;
+  color: var(--link-color);
+}
+
+.PageHeader .pure-menu {
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+.PageHeader {
+  border-bottom: 1px solid var(--separator-color);
+  font-size: 1.1rem;
+  padding: 0.2em 0;
+}
+
+.PageHeader-menu {
+  float: right;
+}
+
+.PageHeader-link {
+  float: left;
+}
+
+.PageHeader-menu-link {
+  font-size: 0.9rem;
+  padding-top: 0.7em;
+}

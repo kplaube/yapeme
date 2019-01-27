@@ -1,0 +1,24 @@
+:root {
+  --font-family-common: Roboto, Helvetica, sans-serif;
+  --font-family-content: Georgia, sans-serif;
+
+  --font-color: #333;
+  --font-color-secondary: color(var(--font-color) lightness(+ 40%));
+  --link-color: #ea141f;
+  --separator-color: rgba(0, 0, 0, 0.125);
+  --footer-background-color: #f4f4f4;
+
+  --max-width: 768px;
+  --blockquote-border-color: rgba(0, 0, 0, 0.0625);
+  --code-background-color: #f0f0f0;
+  --img-border-color: #dcdcdc;
+  --read-more-color: color(var(--font-color) lightness(+ 50%));
+  --share-border-color: #f0f0f0;
+
+  --tag-background-color: #f5f5f5;
+  --tag-border-color: #f0f0f0;
+  --tag-font-color: color(var(--font-color) lightness(+ 30%));
+
+  --pagination-color: color(var(--font-color) lightness(+ 30%));
+  --pagination-border-color: var(--pagination-color);
+}

@@ -1,2 +1,3 @@
 .python-version
+node_modules
 static/vendor

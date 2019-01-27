@@ -1,0 +1,39 @@
+.Pagination {
+  list-style: none;
+  text-align: center;
+}
+
+.Pagination-item {
+  display: none;
+}
+.Pagination-item--arrow {
+  display: block;
+}
+
+.Pagination-link {
+  border: 1px solid var(--pagination-border-color);
+  color: var(--pagination-color);
+  display: block;
+  line-height: 3;
+  margin: 0.3125em 0;
+  text-align: center;
+  text-decoration: none;
+}
+.Pagination-link--active {
+  border: 0;
+}
+
+@media screen and (min-width: 620px) {
+  .Pagination-item {
+    display: inline-block;
+  }
+
+  .Pagination-link {
+    line-height: 1;
+    margin: 0.05em;
+    padding: 0.5em;
+  }
+  .Pagination-link .Pagination-text {
+    display: none;
+  }
+}

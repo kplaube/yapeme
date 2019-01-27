@@ -16,6 +16,10 @@ Now you can install all project's dependencies via `install` task:
 
     $ make install
 
+The `build` task will make some public assets available for Pelican:
+
+    $ make build
+
 ## Configuration
 
 You need to edit your settings and add the following parameters:

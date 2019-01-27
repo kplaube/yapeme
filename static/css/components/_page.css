@@ -1,0 +1,8 @@
+.Page {
+  color: var(--font-color);
+}
+
+.PageContent {
+  margin: 0 auto;
+  max-width: var(--max-width);
+}

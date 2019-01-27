@@ -1,0 +1,33 @@
+.align-center,
+.align-center-keep-size {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.align-left {
+  display: block;
+  margin: 1em auto;
+  width: 90%;
+}
+
+.u-box {
+  padding: 1rem;
+}
+
+.u-highlighted {
+  color: var(--link-color);
+}
+
+@media screen and (min-width: 620px) {
+  .align-center-keep-size {
+    width: auto;
+  }
+
+  .align-left {
+    float: left;
+    margin: 0 1em 0.5em 0;
+    max-width: 25%;
+  }
+}
