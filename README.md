@@ -2,8 +2,6 @@
 
 Yapeme (Yet Another PElican theME) is a responsive theme for Pelican.
 
-You can check it live in my [blog](http://klauslaube.com.br/).
-
 Contributions are welcome!
 
 ## Installing
