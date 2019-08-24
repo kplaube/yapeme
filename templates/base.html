@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="{{ DEFAULT_LANG }}">
 <head>
   <meta charset="utf-8">
   <title>{% block title %}{{ SITESUBTITLE }}{% endblock %} | {% block sitename %}{{ SITENAME }}{% endblock %}</title>
@@ -19,11 +19,11 @@
       <meta property="og:image" content="{{ article.meta.og_image }}">
     {% elif article.ogtags %}
       {% for tag in article.ogtags %}
-        <meta property="{{tag[0]}}" content="{{tag[1]|striptags|e}}" />
+        <meta property="{{tag[0]}}" content="{{tag[1]|striptags|e}}">
       {% endfor %}
     {% endif %}
-  {% elif DEFAULT_OG_IMAGE %}
-    <meta property="og:image" content="{{ DEFAULT_OG_IMAGE }}">
+  {% else %}
+    <meta property="og:image" content="{{ SITEURL }}/opengraph.jpg">
   {% endif %}
 
   {% if FACEBOOK_APP_ID %}
@@ -36,9 +36,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  {% if FAVICON_URL %}
-    <link rel="icon" type="image/x-icon" href="{{ FAVICON_URL }}">
-  {% endif %}
+  <link rel="icon" type="image/x-icon" href="{{ SITEURL }}/favicon.ico">
 
   <link rel="alternate" type="application/rss+xml" title="{{ SITENAME }} &raquo; Feed" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}">
   <link rel="canonical" href="{% block canonical_url %}{{ SITEURL }}/{{ page_name }}{% if articles_page and articles_page.number != 1 %}{{ articles_page.number }}{% endif %}.html{% endblock %}">
