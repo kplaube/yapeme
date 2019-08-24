@@ -130,11 +130,6 @@
   text-decoration: none;
 }
 
-.Article-share {
-  border-top: 1px solid var(--share-border-color);
-  padding-top: 1em;
-}
-
 .Article-tagLabel {
   display: none;
 }

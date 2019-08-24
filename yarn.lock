@@ -2,11 +2,6 @@
 # yarn lockfile v1
 
 
-"@globocom/share-bar@^3.1.5":
-  version "3.1.5"
-  resolved "https://npm.tradeshift.net/repository/npm-all/@globocom/share-bar/-/share-bar-3.1.5.tgz#162a6ffb64b6a0e2dd917581aa604a1f7c7ed455"
-  integrity sha512-GZngUS+W1NmRw24uxhXLqI1vY+E8HNuOahK07pgc/cDmPgOUjd30PVZN3D4D4JnZhKdAWoWI0+d2Y6cEKYORGw==
-
 "@types/q@^1.5.1":
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.1.tgz#48fd98c1561fe718b61733daed46ff115b496e18"

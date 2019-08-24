@@ -14,13 +14,3 @@
     {% include "includes/article.html" %}
 
 {% endblock content %}
-
-{% block scripts %}
-  {{ super() }}
-
-  <link rel="stylesheet" href="{{ SITEURL }}/theme/vendor/@globocom/share-bar/dist/css/share.bar.min.css">
-  <script src="{{ SITEURL }}/theme/vendor/@globocom/share-bar/dist/js/share.bar.min.js"></script>
-  <script async>
-    new ShareBar();
-  </script>
-{% endblock %}

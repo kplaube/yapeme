@@ -13,13 +13,9 @@
   },
   "homepage": "https://github.com/kplaube/yapeme#readme",
   "dependencies": {
-    "@globocom/share-bar": "^3.1.5",
     "cssnano": "^4.1.8",
     "postcss": "^7.0.14",
     "postcss-cssnext": "^3.1.0",
     "postcss-import": "^12.0.1"
-  },
-  "scripts": {
-    "build": "cp -r ./node_modules/@globocom ./static/vendor/"
   }
 }

@@ -7,10 +7,6 @@ help:
 	@echo '  make install                         install all dependencies    '
 	@echo '                                                                   '
 
-build:
-	@echo "Building static assets..."
-	@npm run build
-
 install:
 	@echo "Installing global Node dependencies..."
 	@yarn global add postcss-cli
