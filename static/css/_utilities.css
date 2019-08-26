@@ -9,7 +9,13 @@
 .align-left {
   display: block;
   margin: 1em auto;
-  width: 90%;
+  max-width: 90%;
+}
+
+.representative-image {
+  display: block;
+  margin: 0 auto 1em auto;
+  text-align: center;
 }
 
 .u-box {
@@ -25,9 +31,9 @@
     width: auto;
   }
 
-  .align-left {
+  .align-left,
+  .representative-image {
     float: left;
     margin: 0 1em 0.5em 0;
-    max-width: 25%;
   }
 }
