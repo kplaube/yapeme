@@ -50,6 +50,7 @@ This theme uses the following Pelican plugins:
 - [extended_meta](https://github.com/kplaube/extended_meta)
 - [i18n_subsites](https://github.com/getpelican/pelican-plugins/tree/master/i18n_subsites)
 - [liquid_tags](https://github.com/getpelican/pelican-plugins/tree/master/liquid_tags)
+- [representative image](https://github.com/getpelican/pelican-plugins/tree/master/representative_image)
 
 ## Translations
 
