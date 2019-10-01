@@ -41,7 +41,16 @@
 
         <div class="Article-content" itemprop="articleBody">
             {% if is_summary and article.has_summary %}
+                {% if article.featured_image %}
+                    <a
+                            href="{{ SITEURL }}/{{ article.url }}"
+                            title="{{ gettext('Read the full article') }}">
+                        {% include "includes/thumbnail.html" %}
+                    </a>
+                {% endif %}
+
                 {{ summ.format(article) }}
+
                 <p class="Article-footer">
                     {{ gettext('On') }} <time datetime="{{ article.date.isoformat() }}" itemprop="datePublished">{{ article.locale_date }}</time>
                     /
@@ -51,6 +60,10 @@
                         title="{{ gettext('Read the full article') }}">{{ gettext('Read more &gt') }}</a>
                 </p>
             {% else %}
+                {% if article.featured_image %}
+                    {% include "includes/thumbnail.html" %}
+                {% endif %}
+
                 {{ article.content }}
             {% endif %}
         </div>
