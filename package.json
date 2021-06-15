@@ -14,7 +14,7 @@
   "homepage": "https://github.com/kplaube/yapeme#readme",
   "dependencies": {
     "cssnano": "^4.1.8",
-    "postcss": "^7.0.14",
+    "postcss": "^7.0.36",
     "postcss-cssnext": "^3.1.0",
     "postcss-import": "^12.0.1"
   }
