@@ -1,3 +1,5 @@
+{% import 'macros/summary.html' as summ %}
+
 <article class="Article u-box" itemscope="" itemtype="http://schema.org/BlogPosting">
     {% if article.meta %}
         <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
@@ -47,7 +49,8 @@
                     </a>
                 {% endif %}
 
-                {{ article.summary }}
+                {{ summ.format(article) }}
+
 
                 <p class="Article-footer">
                     {{ gettext('On') }} <time datetime="{{ article.date.isoformat() }}" itemprop="datePublished">{{ article.locale_date }}</time>

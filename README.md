@@ -31,6 +31,7 @@ This theme uses the following Pelican plugins:
 - Installed [through forking](https://github.com/getpelican/pelican-plugins/tree/master#how-to-use-plugins) `pelican-plugins` repository:
   - [i18n_subsites](https://github.com/getpelican/pelican-plugins/tree/master/i18n_subsites) `(required)`
   - [summary](https://github.com/getpelican/pelican-plugins/tree/master/summary) `(recommended)`
+  - [representative_image](https://github.com/getpelican/pelican-plugins/tree/master/representative_image) `(recommended)`
 
 - Installed through manual intervention:
   - [extended_meta](https://github.com/kplaube/extended_meta) `(optional)`
