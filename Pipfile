@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 Babel = "*"
 "Jinja2" = "*"
+pelican-webassets = "*"
 
 [dev-packages]
 

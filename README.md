@@ -2,27 +2,53 @@
 
 Yapeme (Yet Another PElican theME) is a responsive theme for Pelican.
 
-Contributions are welcome!
-
 ## Installing
 
-Before installing the theme, make sure you have [Yarn](https://yarnpkg.com/en/) and [Pipenv](https://github.com/pypa/pipenv) installed:
+Before installing the theme, make sure to have [Yarn](https://yarnpkg.com/en/) (or [NPM](https://www.npmjs.com)) installed.
 
-    $ brew install node pipenv
+First, solve the Javascript dependencies by running the following:
 
-Now you can install all project's dependencies via `install` task:
 
-    $ make install
+```text
+yarn global add postcss-cli
+yarn install
+```
 
-The `build` task will make some public assets available for Pelican:
+And finally, the Python dependencies:
 
-    $ make build
+```text
+pip install -r requirements.txt
+```
+
+If you are running your blog/website in a Python `virtualenv`, make sure to install the template's dependencies there.
+
+## Plugins
+
+This theme uses the following Pelican plugins:
+
+- Installed with `requirements.txt` (no action needed):
+  - [webassets](https://github.com/pelican-plugins/webassets) `(required)`
+- Installed [through forking](https://github.com/getpelican/pelican-plugins/tree/master#how-to-use-plugins) `pelican-plugins` repository:
+  - [i18n_subsites](https://github.com/getpelican/pelican-plugins/tree/master/i18n_subsites) `(required)`
+  - [summary](https://github.com/getpelican/pelican-plugins/tree/master/summary) `(recommended)`
+
+- Installed through manual intervention:
+  - [extended_meta](https://github.com/kplaube/extended_meta) `(optional)`
 
 ## Configuration
 
-You need to edit your settings and add the following parameters:
+A mandatory thing is to have `jinja2.ext.i18n` listed as a Jinja extension:
 
+```python
+JINJA_ENVIRONMENT = {"extensions": ["jinja2.ext.i18n"]}
 ```
+
+Also, set `I18N_TEMPLATES_LANG` to `pt_BR` if you want the theme
+in Brazilian Portuguese 🇧🇷
+
+Bellow you can see the list of all parameters used by the theme:
+
+```text
 AUTHOR = "Author's name"
 DISQUS_SITENAME = "Your Disqus sitename"
 FACEBOOK_APP_ID = "Add your Facebook APP ID to check out insigths"
@@ -42,39 +68,39 @@ SOURCE_CODE_REPOSITORY = "GitHub"
 SOURCE_CODE_URL = "Where the source code of your blog is"
 ```
 
-## Plugins
-
-This theme uses the following Pelican plugins:
-
-- [assets](https://github.com/getpelican/pelican-plugins/tree/master/assets)
-- [extended_meta](https://github.com/kplaube/extended_meta)
-- [i18n_subsites](https://github.com/getpelican/pelican-plugins/tree/master/i18n_subsites)
-- [liquid_tags](https://github.com/getpelican/pelican-plugins/tree/master/liquid_tags)
-- [representative image](https://github.com/getpelican/pelican-plugins/tree/master/representative_image)
-
 ## Translations
 
-You can find our translations inside `translations/` folder. If you want to contribute, please follow the instructions below:
+You can find the translations inside `translations/` folder. If you want to contribute, please follow the instructions below:
 
-    $ pybabel extract --mapping babel.cfg --output translations/messages.pot ./
+```text
+pybabel extract --mapping babel.cfg --output translations/messages.pot ./
+```
 
 This is going to create the "translations template" for the project. After that, if you want to create a new language translation:
 
-    $ pybabel init --input-file translations/messages.pot --output-dir translations/ --locale pt-br --domain messages
+```text
+pybabel init --input-file translations/messages.pot --output-dir translations/ --locale pt-br --domain messages
+```
 
 Or if you want to update a already created language file:
 
-    $ pybabel update --input-file translations/messages.pot --output-dir translations --locale pt-br --domain messages
+```text
+pybabel update --input-file translations/messages.pot --output-dir translations --locale pt-br --domain messages
+```
 
 Now you can update the `msgstr` with the proper translation:
 
-    #: templates/includes/article.html:35
-    msgid "By"
-    msgstr "Por"
+```text
+#: templates/includes/article.html:35
+msgid "By"
+msgstr "Por"
+```
 
 To conclude the translation, we need to compile the language file:
 
-    $ pybabel compile -d translations
+```text
+pybabel compile -d translations
+```
 
 Don't forget to configure your [Pelican instance properly](http://docs.getpelican.com/en/stable/content.html#translations).
 

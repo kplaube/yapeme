@@ -1,6 +1,0 @@
-{% macro format(obj) -%}
-    {% set content = obj.content %}
-    {% set end_marker = PELICAN_END_SUMMARY or '<!-- PELICAN_END_SUMMARY -->' %}
-
-    {{ content[:content.find(end_marker)] }}
-{%- endmacro %}
